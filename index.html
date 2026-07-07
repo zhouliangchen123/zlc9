@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>智慧分类垃圾</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- 顶部背景装饰 -->
+  <div class="bg-decoration"></div>
+
+  <div class="app-container">
+    <!-- 头部 -->
+    <header class="header">
+      <div class="header-icon">🌍</div>
+      <h1 class="header-title">智慧分类垃圾</h1>
+      <p class="header-subtitle">分类一小步 · 环保一大步</p>
+    </header>
+
+    <!-- 搜索区域 -->
+    <section class="search-section">
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input
+          type="text"
+          id="searchInput"
+          class="search-input"
+          placeholder="输入垃圾名称，快速查询分类..."
+          autocomplete="off"
+        >
+        <button id="clearBtn" class="search-clear" aria-label="清除搜索">✕</button>
+      </div>
+      <div id="searchStats" class="search-stats"></div>
+    </section>
+
+    <!-- 分类卡片 -->
+    <section class="category-section">
+      <h2 class="section-title">垃圾分类</h2>
+      <div class="category-grid" id="categoryGrid">
+        <!-- JS 动态渲染 -->
+      </div>
+    </section>
+
+    <!-- 搜索结果区 -->
+    <section class="result-section" id="resultSection" style="display:none;">
+      <h2 class="section-title" id="resultTitle">查询结果</h2>
+      <div class="result-list" id="resultList">
+        <!-- JS 动态渲染 -->
+      </div>
+      <div class="result-empty" id="resultEmpty" style="display:none;">
+        <span class="empty-icon">📭</span>
+        <p>未找到匹配的垃圾项</p>
+        <p class="empty-hint">试试其他关键词吧～</p>
+      </div>
+    </section>
+
+    <!-- 热门/常见垃圾 -->
+    <section class="hot-section" id="hotSection">
+      <h2 class="section-title">🔥 常见垃圾速查</h2>
+      <div class="hot-grid" id="hotGrid">
+        <!-- JS 动态渲染 -->
+      </div>
+    </section>
+
+    <!-- 全量列表区（按分类展示） -->
+    <section class="all-section" id="allSection">
+      <h2 class="section-title">📋 全部垃圾分类</h2>
+      <div class="category-tabs" id="categoryTabs">
+        <!-- JS 动态渲染 -->
+      </div>
+      <div class="all-list" id="allList">
+        <!-- JS 动态渲染 -->
+      </div>
+    </section>
+
+    <!-- 回到顶部 -->
+    <button id="backTopBtn" class="back-top" title="回到顶部">↑</button>
+
+    <!-- 底部 -->
+    <footer class="footer">
+      <p>💚 垃圾分类，从我做起</p>
+      <p class="footer-version">智慧分类垃圾 v1.0 · GitHub Pages</p>
+    </footer>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
